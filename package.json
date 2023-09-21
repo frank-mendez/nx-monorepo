@@ -2,13 +2,12 @@
   "name": "@./source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "start:dev": "npx nx serve client && npx nx serve backend"
-  },
+  "scripts": {},
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
+    "@nx/angular": "^16.8.1",
     "@nx/cypress": "16.8.1",
     "@nx/eslint-plugin": "16.8.1",
     "@nx/jest": "16.8.1",
@@ -50,14 +49,21 @@
   },
   "dependencies": {
     "@nestjs/common": "^10.0.2",
+    "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
+    "@nestjs/typeorm": "^10.0.0",
     "axios": "^1.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "mariadb": "^3.2.1",
+    "mysql": "^2.18.1",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "typeorm": "^0.3.17"
   }
 }
