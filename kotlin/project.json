@@ -1,0 +1,84 @@
+{
+  "name": "kotlin",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "kotlin/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nxrocks/nx-ktor:build",
+      "options": {
+        "root": "./kotlin"
+      },
+      "dependsOn": [
+        "^install"
+      ],
+      "outputs": [
+        "{workspaceRoot}/kotlin/build"
+      ]
+    },
+    "test": {
+      "executor": "@nxrocks/nx-ktor:test",
+      "options": {
+        "root": "./kotlin"
+      },
+      "outputs": [
+        "{workspaceRoot}/kotlin/build"
+      ]
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-ktor:clean",
+      "options": {
+        "root": "./kotlin"
+      }
+    },
+    "run": {
+      "executor": "@nxrocks/nx-ktor:run",
+      "options": {
+        "root": "./kotlin"
+      }
+    },
+    "serve": {
+      "executor": "@nxrocks/nx-ktor:serve",
+      "options": {
+        "root": "./kotlin"
+      }
+    },
+    "build-image": {
+      "executor": "@nxrocks/nx-ktor:build-image",
+      "options": {
+        "root": "./kotlin"
+      },
+      "outputs": [
+        "{workspaceRoot}/kotlin/build"
+      ]
+    },
+    "publish-image": {
+      "executor": "@nxrocks/nx-ktor:publish-image",
+      "options": {
+        "root": "./kotlin"
+      },
+      "dependsOn": [
+        "build-image"
+      ]
+    },
+    "publish-image-locally": {
+      "executor": "@nxrocks/nx-ktor:publish-image-locally",
+      "options": {
+        "root": "./kotlin"
+      },
+      "dependsOn": [
+        "build-image"
+      ]
+    },
+    "run-docker": {
+      "executor": "@nxrocks/nx-ktor:run-docker",
+      "options": {
+        "root": "./kotlin"
+      },
+      "dependsOn": [
+        "build-image"
+      ]
+    }
+  },
+  "tags": []
+}
